@@ -114,7 +114,7 @@ fi
 echo starting nginx...
 mkdir /tmp/nginx
 rm -rf nginx.conf
-sed "s/eaglercraft-server/$REPL_SLUG/" nginx_template.conf > nginx.conf
+sed "s/Dream-SMP/$REPL_SLUG/" nginx_template.conf > nginx.conf
 nginx -c ~/$REPL_SLUG/nginx.conf -g 'daemon off; pid /tmp/nginx/nginx.pid;' -p /tmp/nginx -e /tmp/nginx/error.log > /tmp/nginx/output.log 2>&1 &
 
 echo starting bukkit...
